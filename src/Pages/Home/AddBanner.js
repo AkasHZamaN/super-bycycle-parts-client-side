@@ -5,7 +5,7 @@ import banner2 from '../../Images/banner2.jpg';
 const AddBanner = () => {
   return (
     <div>
-      <div className="carousel rounded-box w-full px-6 mb-12">
+      <div className="carousel rounded-box w-full px-6 mb-12" id="logo">
         <div className="carousel-item w-1/2">
           <img
             src={banner1}

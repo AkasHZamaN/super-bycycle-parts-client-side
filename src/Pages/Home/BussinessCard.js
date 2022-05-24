@@ -12,7 +12,7 @@ const BussinessCard = () => {
             <h1 className="font-bold text-2xl text-secondary uppercase my-6">Million Bussiness Trust Us</h1>
         </div>
       <div className="card  bg-base-100 shadow-xl">
-        <div className="flex justify-center items-center mx-6">
+        <div id="logo" className="flex justify-center items-center mx-6">
 
         <div className="text-center mr-6">
         <div className="w-24 mask mask-hexagon">
@@ -48,9 +48,9 @@ const BussinessCard = () => {
                     </div>
                     <div>
                     <p className="mb-2">
-                    <button className="btn bg-gradient-to-r from-primary to-secondary border-0 text-white ">Purchase</button>
+                    <button className="btn bg-gradient-to-r from-primary to-secondary border-0 text-white ">Request Quote</button>
                     </p>
-                    <button className="btn bg-gradient-to-r from-primary to-secondary border-0 text-white">Purchase</button>
+                    <button className="btn bg-gradient-to-r from-primary to-secondary border-0 text-white">Contact Us</button>
                     </div>
                 </div>
             </div>

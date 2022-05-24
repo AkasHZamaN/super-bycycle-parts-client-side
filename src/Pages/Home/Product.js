@@ -4,7 +4,7 @@ const Product = ({ product }) => {
   const { name, photo, quantity, details, price } = product;
   return (
     <div>
-      <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+      <div id="logo" className="card lg:max-w-lg bg-base-100 shadow-xl">
         <figure>
           <img
             className="w-full h-80"

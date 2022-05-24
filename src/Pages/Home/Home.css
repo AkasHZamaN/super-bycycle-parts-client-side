@@ -1,0 +1,11 @@
+#logo img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    cursor: pointer;
+}
+#logo img:hover {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}

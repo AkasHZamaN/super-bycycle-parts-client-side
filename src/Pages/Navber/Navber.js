@@ -23,7 +23,7 @@ const Navber = () => {
   return (
     <div>
       <div className="navbar bg-emerald-500 px-6">
-        <div className="navbar-start">
+        <div id="logo" className="navbar-start">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-ghost lg:hidden">
               <svg
