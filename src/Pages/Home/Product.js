@@ -3,7 +3,7 @@ import React from "react";
 const Product = ({ product }) => {
   const { name, photo, quantity, details, price } = product;
   return (
-    <div>
+    <div className="mb-6">
       <div id="logo" className="card lg:max-w-lg bg-base-100 shadow-xl">
         <figure>
           <img
