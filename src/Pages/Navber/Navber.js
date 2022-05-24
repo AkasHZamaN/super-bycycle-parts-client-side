@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import cycleLogo from '../../Images/cycleLogo.png';
 
 const Navber = () => {
   const menuItems = (
@@ -49,7 +50,8 @@ const Navber = () => {
               
             </ul>
           </div>
-          <h1 className="btn btn-ghost normal-case text-xl text-slate-100">SUPER BIKE</h1>
+          <img className="w-12 h-10" src={cycleLogo} alt="" />
+          <h1 className="btn btn-ghost normal-case text-xl text-slate-100">SuperBike</h1>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0 text-slate-100">
