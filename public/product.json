@@ -1,0 +1,74 @@
+[
+    {
+        "_id": 1,
+        "name":"Hummingbird Printed Cycle",
+        "quantity": 400,
+        "details":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "photo":"https://i.postimg.cc/V6V8GQgn/superbikebicycle-1.jpg",
+        "price": 189.00
+    },
+    {
+        "_id": 2,
+        "name":"Framed Poster",
+        "quantity": 500,
+        "details":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "photo":"https://i.postimg.cc/x1zBYNRk/superbikebicycle-2-1.jpg",
+        "price": 190.00
+    },
+    {
+        "_id": 3,
+        "name":"Printed Bycycle Bag",
+        "quantity": 380,
+        "details":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "photo":"https://i.postimg.cc/7ZZdGQw2/superbikebicycle-3-1-1.jpg",
+        "price": 230.00
+    },
+    {
+        "_id": 4,
+        "name":"Framed Metal Bycycle Bell",
+        "quantity": 450,
+        "details":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "photo":"https://i.postimg.cc/qvNQdfpj/superbikebicycle-4-1-1.jpg",
+        "price": 150.00
+    },
+    {
+        "_id": 5,
+        "name":"Framed Poster LED Light",
+        "quantity": 400,
+        "details":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "photo":"https://i.postimg.cc/9Mgr2kmY/superbikebicycle-5-1-1.jpg",
+        "price": 170.00
+    },
+    {
+        "_id": 6,
+        "name":"Bycycle Super Seat",
+        "quantity": 360,
+        "details":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "photo":"https://i.postimg.cc/brT88D9c/superbikebicycle-7-1-1.jpg",
+        "price": 220.00
+    },
+    {
+        "_id": 7,
+        "name":"Framed Poster Super Helmate",
+        "quantity": 300,
+        "details":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "photo":"https://i.postimg.cc/wjkWV5Td/superbikebicycle-8-1-1.jpg",
+        "price": 140.00
+    },
+    {
+        "_id": 8,
+        "name":"Super Wheels",
+        "quantity": 250,
+        "details":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "photo":"https://i.postimg.cc/4yCbZnN5/superbikebicycle-10-1-1.jpg",
+        "price": 180.00
+    },
+    {
+        "_id": 9,
+        "name":"Super Tourer Bycycle Blue",
+        "quantity": 450,
+        "details":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "photo":"https://i.postimg.cc/rm2Kw4xK/cycle-blue.webp",
+        "price": 250.00
+    }
+]
