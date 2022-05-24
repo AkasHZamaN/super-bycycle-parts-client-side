@@ -13,7 +13,7 @@ const HomeProduct = () => {
             <div className='flex justify-between px-6'>
             <div className='flex items-center'>
                 <img className="w-12 h-10 " src={cycle} alt="" />
-                <h1 className='text-3xl text-accent font-bold ml-2'>New Product</h1>
+                <h1 className='text-2xl text-secondary font-bold ml-2 uppercase'>New Product</h1>
             </div>
                 <div>
                     <Link to={'/warehouse'}><img className='w-12 h-12' src={arrowBandSign} alt="" /></Link>
