@@ -6,7 +6,7 @@ import about3 from "../../Images/about-3.jpg";
 
 const AboutProduct = () => {
   return (
-    <div>
+    <div className="w-full mx-auto">
       <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
           <img src={aboutImages} className="max-w-sm rounded-lg " alt="" />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cycleLogo from '../../Images/cycleLogo.png';
+import navlogo from '../../Images/footer-logo.png';
 
 const Navber = () => {
   const menuItems = (
@@ -22,7 +22,7 @@ const Navber = () => {
 
   return (
     <div>
-      <div className="navbar bg-emerald-500 px-6">
+      <div className="navbar bg-accent px-6">
         <div id="logo" className="navbar-start">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -50,8 +50,7 @@ const Navber = () => {
               
             </ul>
           </div>
-          <img className="w-12 h-10" src={cycleLogo} alt="" />
-          <h1 className="btn btn-ghost normal-case text-xl text-slate-100">SuperBike</h1>
+          <img className="" src={navlogo} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0 text-slate-100">

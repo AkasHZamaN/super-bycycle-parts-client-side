@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer/Footer";
 import AboutProduct from "./AboutProduct";
 import AddBanner from "./AddBanner";
 import BrandLogos from "./BrandLogos";
@@ -19,6 +20,7 @@ const Home = () => {
       <ReviewCarousal></ReviewCarousal>
       <BrandLogos></BrandLogos>
       <NewsLatter></NewsLatter>
+      <Footer></Footer>
     </div>
   );
 };
