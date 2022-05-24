@@ -49,10 +49,10 @@ const Navber = () => {
               
             </ul>
           </div>
-          <h1 className="btn btn-ghost normal-case text-xl">Super Bike</h1>
+          <h1 className="btn btn-ghost normal-case text-xl text-slate-100">SUPER BIKE</h1>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">
+          <ul className="menu menu-horizontal p-0 text-slate-100">
             
           {menuItems}
 
