@@ -21,15 +21,27 @@ const Navber = () => {
         <li>
             <Link to={'/warehouse'}>Warehouse</Link>
         </li>
-          <li>
+          {
+            user ? '' :
+            <li>
             <Link to={'/signup'}>Sign Up</Link>
-        </li> 
+          </li>
+          } 
+        
         {
-          user ? <button onClick={logout} className="btn btn-ghost text-secondary">Logout</button> :
+          user ? <><div className="dropdown dropdown-end">
+          <label tabIndex="5" className="btn btn-ghost rounded-btn"><span className="text-secondary">{user?.displayName && user?.displayName}</span></label>
+          <ul tabIndex="5" className="menu dropdown-content p-2 shadow bg-accent rounded-box w-52 mt-4">
+            <li><button className="btn btn-ghost text-white">My Profile</button></li>
+
+            <li><button onClick={logout} className="btn btn-ghost text-secondary">Logout</button></li> 
+          </ul>
+        </div></> :
           <li>
             <Link to={'/login'}>Login</Link>
         </li>
         }
+        {/* <button onClick={logout} className="btn btn-ghost text-secondary">Logout</button> */}
         
       </>
   )
