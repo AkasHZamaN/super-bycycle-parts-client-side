@@ -11,6 +11,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './Pages/Footer/Footer';
 import ResetPass from './Pages/Login/ResetPass';
+import RequireAuth from './Pages/Login/RequreAuth';
 
 function App() {
   return (
@@ -19,7 +20,13 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/warehouse' element={<Warehouse></Warehouse>}></Route>
-        <Route path='/warehouse/:productId' element={<PurchaseProduct></PurchaseProduct>}></Route>
+
+        <Route path='/warehouse/:productId' element={
+        <RequireAuth>
+          <PurchaseProduct></PurchaseProduct>
+        </RequireAuth>}>
+        </Route>
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/resetPass' element={<ResetPass></ResetPass>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>

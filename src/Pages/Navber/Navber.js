@@ -1,8 +1,18 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 import navlogo from '../../Images/footer-logo.png';
 
 const Navber = () => {
+  const [user, loading, error] = useAuthState(auth);
+
+  const logout = () => {
+    signOut(auth);
+    // localStorage.removeItem('accessToken');
+  };
+
   const menuItems = (
       <>
         <li>
@@ -14,9 +24,12 @@ const Navber = () => {
           <li>
             <Link to={'/signup'}>Sign Up</Link>
         </li> 
-        <li>
+        {
+          user ? <button onClick={logout} className="btn btn-ghost text-secondary">Logout</button> :
+          <li>
             <Link to={'/login'}>Login</Link>
         </li>
+        }
         
       </>
   )
