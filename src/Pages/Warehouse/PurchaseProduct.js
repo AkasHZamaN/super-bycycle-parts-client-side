@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const PurchaseProduct = () => {
   const { productId } = useParams();
@@ -20,11 +21,12 @@ const PurchaseProduct = () => {
   const orderQuantity = event => {
       event.preventDefault();
       const number = parseInt(event.target.number.value);
-      if(number > 0 && number !== ''){
-        console.log(number)
+      if(number > 100 && number !== '' && number <= items.quantity){
+        console.log(number);
+        toast.success(`${number} items are successfully ordered. Thanks for order !`)
       }
       else{
-          console.error('Please INPUT Positive Value')
+          toast.error(`Minimum order products 100 items or more but ${items.quantity} items are available only !`)
       }
   }
 
