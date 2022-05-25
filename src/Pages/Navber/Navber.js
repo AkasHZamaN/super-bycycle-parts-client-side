@@ -123,7 +123,7 @@ const Navber = () => {
           </label>
       </div>
       </div>
-      <MyProfile key={user.uid} user={user}></MyProfile>
+      <MyProfile key={user?.uid} user={user}></MyProfile>
     </div>
   );
 };

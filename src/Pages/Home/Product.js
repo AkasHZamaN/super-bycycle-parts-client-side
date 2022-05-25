@@ -5,8 +5,8 @@ const Product = ({ product }) => {
   const {_id, name, photo, quantity, details, price } = product;
   const navigate = useNavigate();
 
-  const purchaseNow = (_id) =>{
-    navigate(`/warehouse/${_id}`);
+  const purchaseNow = (id) =>{
+    navigate(`/warehouse/${id}`);
   }
   
 
