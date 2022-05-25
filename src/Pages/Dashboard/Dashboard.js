@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 // import useAdmin from "../../hooks/useAdmin";
 import {useAuthState} from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import MyProfile from "./MyProfile";
 
 
 const Dashboard = () => {
@@ -19,7 +20,7 @@ const Dashboard = () => {
       </div>
       <div className="drawer-side">
         <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
+        <ul className="menu p-4 my-8 overflow-y-auto w-60 bg-base-100 text-base-content">
           <li>
             <Link to={"/dashboard"}>My Order</Link>
           </li>
@@ -27,10 +28,11 @@ const Dashboard = () => {
             <Link to={"/dashboard/review"}>Add Review</Link>
           </li>
           <li>
-            <Link to={"/dashboard/myprofile"}>My Profile</Link>
+            <label htmlFor="mymodal" className="modal-button">My Profile</label>
           </li>         
         </ul>
       </div>
+      <MyProfile key={user.uid} user={user}></MyProfile>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 import navlogo from '../../Images/footer-logo.png';
-import Modal from "./Modal";
+import MyProfile from "../Dashboard/MyProfile";
 
 const Navber = () => {
   const [user] = useAuthState(auth);
@@ -47,7 +47,7 @@ const Navber = () => {
           <ul tabIndex="2" className="menu dropdown-content p-2 shadow bg-accent rounded-box w-52 mt-4">
             <li className="flex items-center"> 
             <UserIcon className="w-6 h-6 text-secondary p-0 m-0"></UserIcon> 
-              <label  htmlFor="my-modal" className="btn btn-ghost text-white">My Profile</label>
+              <label  htmlFor="mymodal" className="btn btn-ghost text-white">My Profile</label>
             </li>
 
             <li className="flex items-center">
@@ -123,7 +123,7 @@ const Navber = () => {
           </label>
       </div>
       </div>
-              <Modal key={user?.uid} user={user}></Modal>
+      <MyProfile key={user.uid} user={user}></MyProfile>
     </div>
   );
 };

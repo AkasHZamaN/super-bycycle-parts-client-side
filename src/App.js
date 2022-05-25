@@ -15,7 +15,8 @@ import RequireAuth from './Pages/Login/RequreAuth';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import AddReview from './Pages/Dashboard/AddReview';
-import MyProfile from './Pages/Dashboard/MyProfile';
+// import MyProfile from './Pages/Dashboard/MyProfile';
+// import Modal from './Pages/Navber/Modal';
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
         </RequireAuth>}>
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
-          <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+          {/* <Route path='myprofile' element={<Modal></Modal>}></Route> */}
         </Route>
 
         <Route path='/login' element={<Login></Login>}></Route>
