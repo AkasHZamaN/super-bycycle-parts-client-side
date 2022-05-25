@@ -20,7 +20,6 @@ const Home = () => {
       <ReviewCarousal></ReviewCarousal>
       <BrandLogos></BrandLogos>
       <NewsLatter></NewsLatter>
-      <Footer></Footer>
     </div>
   );
 };

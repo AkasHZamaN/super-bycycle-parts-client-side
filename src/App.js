@@ -9,6 +9,8 @@ import NotFound from './Pages/NotFound/NotFound';
 import PurchaseProduct from './Pages/Warehouse/PurchaseProduct';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from './Pages/Footer/Footer';
+import ResetPass from './Pages/Login/ResetPass';
 
 function App() {
   return (
@@ -19,11 +21,13 @@ function App() {
         <Route path='/warehouse' element={<Warehouse></Warehouse>}></Route>
         <Route path='/warehouse/:productId' element={<PurchaseProduct></PurchaseProduct>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/resetPass' element={<ResetPass></ResetPass>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
 
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>
   );

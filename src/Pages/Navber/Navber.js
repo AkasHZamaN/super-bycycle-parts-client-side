@@ -11,12 +11,13 @@ const Navber = () => {
         <li>
             <Link to={'/warehouse'}>Warehouse</Link>
         </li>
+          <li>
+            <Link to={'/signup'}>Sign Up</Link>
+        </li> 
         <li>
             <Link to={'/login'}>Login</Link>
         </li>
-        <li>
-            <Link to={'/signup'}>Sign Up</Link>
-        </li>
+        
       </>
   )
 
