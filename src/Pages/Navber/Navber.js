@@ -1,9 +1,12 @@
+import { LogoutIcon, UserIcon } from "@heroicons/react/solid";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 import navlogo from '../../Images/footer-logo.png';
+import Loading from "../Loading/Loading";
+import Modal from "./Modal";
 
 const Navber = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -12,6 +15,18 @@ const Navber = () => {
     signOut(auth);
     // localStorage.removeItem('accessToken');
   };
+
+  if(loading){
+    return <Loading></Loading>
+  }
+
+  if(user){
+    // console.log(user);
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>
+  }
 
   const menuItems = (
       <>
@@ -30,18 +45,24 @@ const Navber = () => {
         
         {
           user ? <><div className="dropdown dropdown-end">
-          <label tabIndex="5" className="btn btn-ghost rounded-btn"><span className="text-secondary">{user?.displayName && user?.displayName}</span></label>
-          <ul tabIndex="5" className="menu dropdown-content p-2 shadow bg-accent rounded-box w-52 mt-4">
-            <li><button className="btn btn-ghost text-white">My Profile</button></li>
+          <label tabIndex="1" className="btn btn-ghost rounded-btn"><span className="text-secondary">{user?.displayName && user?.displayName}</span></label>
+          <ul tabIndex="1" className="menu dropdown-content p-2 shadow bg-accent rounded-box w-52 mt-4">
+            <li className="flex items-center"> 
+            <UserIcon className="w-6 h-6 text-secondary p-0 m-0"></UserIcon> 
+              <label  htmlFor="my-modal" className="btn btn-ghost text-white">My Profile</label>
+            </li>
 
-            <li><button onClick={logout} className="btn btn-ghost text-secondary">Logout</button></li> 
+            <li className="flex items-center">
+            <LogoutIcon className="w-6 h-6 text-secondary p-0 m-0"></LogoutIcon>
+              <button onClick={logout} className="btn btn-ghost text-secondary">Logout</button>
+              </li> 
           </ul>
         </div></> :
           <li>
             <Link to={'/login'}>Login</Link>
         </li>
         }
-        {/* <button onClick={logout} className="btn btn-ghost text-secondary">Logout</button> */}
+        
         
       </>
   )
@@ -89,6 +110,7 @@ const Navber = () => {
           <p className="btn">Get started</p>
         </div>
       </div>
+              <Modal key={user?.uid} user={user}></Modal>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../Footer/Footer";
 import AboutProduct from "./AboutProduct";
 import AddBanner from "./AddBanner";
 import BrandLogos from "./BrandLogos";
