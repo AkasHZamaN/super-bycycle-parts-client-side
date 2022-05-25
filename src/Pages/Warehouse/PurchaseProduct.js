@@ -21,7 +21,7 @@ const PurchaseProduct = () => {
   const orderQuantity = event => {
       event.preventDefault();
       const number = parseInt(event.target.number.value);
-      if(number > 100 && number !== '' && number <= items.quantity){
+      if(number >= 100 && number !== '' && number <= items.quantity){
         console.log(number);
         toast.success(`${number} items are successfully ordered. Thanks for order !`)
       }

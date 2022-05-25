@@ -5,27 +5,18 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 import navlogo from '../../Images/footer-logo.png';
-import Loading from "../Loading/Loading";
 import Modal from "./Modal";
 
 const Navber = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   const logout = () => {
     signOut(auth);
     // localStorage.removeItem('accessToken');
   };
 
-  if(loading){
-    return <Loading></Loading>
-  }
-
   if(user){
     // console.log(user);
-  }
-
-  if (error) {
-    return <p>Error: {error}</p>
   }
 
   const menuItems = (
@@ -36,6 +27,13 @@ const Navber = () => {
         <li>
             <Link to={'/warehouse'}>Warehouse</Link>
         </li>
+        {
+          user ? 
+          <li>
+            <Link to={'/dashboard'}>Dashboard</Link>
+          </li> :
+          ''
+        }
           {
             user ? '' :
             <li>
@@ -45,8 +43,8 @@ const Navber = () => {
         
         {
           user ? <><div className="dropdown dropdown-end">
-          <label tabIndex="1" className="btn btn-ghost rounded-btn"><span className="text-secondary">{user?.displayName && user?.displayName}</span></label>
-          <ul tabIndex="1" className="menu dropdown-content p-2 shadow bg-accent rounded-box w-52 mt-4">
+          <label tabIndex="2" className="btn btn-ghost rounded-btn"><span className="text-secondary">{user?.displayName && user?.displayName}</span></label>
+          <ul tabIndex="2" className="menu dropdown-content p-2 shadow bg-accent rounded-box w-52 mt-4">
             <li className="flex items-center"> 
             <UserIcon className="w-6 h-6 text-secondary p-0 m-0"></UserIcon> 
               <label  htmlFor="my-modal" className="btn btn-ghost text-white">My Profile</label>
@@ -54,7 +52,7 @@ const Navber = () => {
 
             <li className="flex items-center">
             <LogoutIcon className="w-6 h-6 text-secondary p-0 m-0"></LogoutIcon>
-              <button onClick={logout} className="btn btn-ghost text-secondary">Logout</button>
+              <button onClick={logout} className="btn btn-ghost text-error">Logout</button>
               </li> 
           </ul>
         </div></> :
@@ -107,8 +105,23 @@ const Navber = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <p className="btn">Get started</p>
-        </div>
+      <label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
+      </div>
       </div>
               <Modal key={user?.uid} user={user}></Modal>
     </div>
