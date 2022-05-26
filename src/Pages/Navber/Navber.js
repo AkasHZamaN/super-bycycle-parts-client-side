@@ -12,7 +12,7 @@ const Navber = () => {
 
   const logout = () => {
     signOut(auth);
-    // localStorage.removeItem('accessToken');
+    localStorage.removeItem('accessToken');
   };
 
   if(user){

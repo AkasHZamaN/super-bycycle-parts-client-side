@@ -5,6 +5,7 @@ import firebaselogo from '../../Images/firebase.png';
 import facebook from '../../Images/facebook.png';
 import github from '../../Images/github.png';
 import linkedin from '../../Images/linkedin.png';
+import userIcon from '../../Images/userIcon.png';
 
 const MyProfile = ({user}) => {
     return (
@@ -14,7 +15,7 @@ const MyProfile = ({user}) => {
         <div className="modal-box text-center">
             <div className="avatar online">
                 <div className="w-24 rounded-full">
-                    <img src={user?.photoURL} alt="" />
+                    <img src={user?.photoURL ? user?.photoURL : userIcon } alt="" />
                 </div>
             </div>
             <div className="text-left font-normal text-black">

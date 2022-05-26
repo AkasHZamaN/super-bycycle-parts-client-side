@@ -8,7 +8,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Loading/Loading";
 import { Link, useNavigate } from "react-router-dom";
-// import useToken from '../../hooks/useToken';
+import useToken from '../../hooks/useToken';
 
 const SignUP = () => {
     const {register,formState: { errors },handleSubmit,} = useForm();
@@ -20,7 +20,7 @@ const SignUP = () => {
   const [updateProfile, updating, updateError] = useUpdateProfile(auth); 
   const navigate = useNavigate(); 
 
-//   const [token]= useToken(user || gUser);
+  const [token]= useToken(user || gUser);
   
 
   if (loading || gLoading || updating) {
@@ -35,8 +35,8 @@ const SignUP = () => {
       </p>
     );
   }
-    //if(token) chilo
-  if (user || gUser) {
+    
+  if (token) {
     navigate('/')
     console.log("google sign in: ", user, gUser);
   }
