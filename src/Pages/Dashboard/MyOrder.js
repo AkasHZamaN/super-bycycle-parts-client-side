@@ -33,8 +33,8 @@ const MyOrder = () => {
     .then(res => res.json())
     .then(data => {
         console.log("delete api data",data);
-        const remainingItems = orders.filter(order => order._id !== parseInt(id));
-        setOrders(remainingItems);
+        const remainingItem = orders.filter(order => order._id !== id);
+                setOrders(remainingItem);
     })
     }
   }
