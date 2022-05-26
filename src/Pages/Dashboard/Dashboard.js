@@ -33,12 +33,24 @@ const Dashboard = () => {
             <Link to={"/dashboard/review"}>Add Review</Link>
           </li>
           }
-          <li>
+          {
+            admin &&  
+            <li>
             <Link to={"/dashboard/users"}>All User</Link>
           </li>
-          <li>
+          }
+          {
+            admin &&
+            <li>
             <Link to={"/dashboard/manageProduct"}>Manage Product</Link>
           </li>
+          }
+          {
+            admin &&
+            <li>
+            <Link to={"/dashboard/addProduct"}>Add Product</Link>
+          </li>
+          }
           <li>
             <label htmlFor="mymodal" className="modal-button">My Profile</label>
           </li>         
