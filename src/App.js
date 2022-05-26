@@ -16,6 +16,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import AddReview from './Pages/Dashboard/AddReview';
 import Users from './Pages/Dashboard/Users';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='users' element={<Users></Users>}></Route>
+          <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
         </Route>
 
         <Route path='/login' element={<Login></Login>}></Route>

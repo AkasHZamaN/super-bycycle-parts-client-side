@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
@@ -7,7 +7,7 @@ import {
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Loading/Loading";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useToken from '../../hooks/useToken';
 
 const SignUP = () => {
@@ -19,10 +19,18 @@ const SignUP = () => {
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth); 
   const navigate = useNavigate(); 
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
 
   const [token]= useToken(user || gUser);
   
-
+  useEffect(()=>{
+    if (token) {
+      navigate(from, { replace: true });
+      // console.log("google sign in: ", user, gUser);
+    }
+  },[from, navigate, token])
+  
   if (loading || gLoading || updating) {
     return <Loading></Loading>;
   }
@@ -36,10 +44,7 @@ const SignUP = () => {
     );
   }
     
-  if (token) {
-    navigate('/')
-    console.log("google sign in: ", user, gUser);
-  }
+  
 
   
   const onSubmit = async(data) => {

@@ -31,6 +31,9 @@ const Dashboard = () => {
             <Link to={"/dashboard/users"}>All User</Link>
           </li>
           <li>
+            <Link to={"/dashboard/manageProduct"}>Manage Product</Link>
+          </li>
+          <li>
             <label htmlFor="mymodal" className="modal-button">My Profile</label>
           </li>         
         </ul>

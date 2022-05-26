@@ -43,7 +43,7 @@ const Navber = () => {
         
         {
           user ? <><div className="dropdown dropdown-end">
-          <label tabIndex="2" className="btn btn-ghost rounded-btn"><span className="text-secondary">{user?.displayName && user?.displayName}</span></label>
+          <label tabIndex="2" className="btn btn-ghost rounded-btn"><span className="text-secondary">{user?.displayName}</span></label>
           <ul tabIndex="2" className="menu dropdown-content p-2 shadow bg-accent rounded-box w-52 mt-4">
             <li className="flex items-center"> 
             <UserIcon className="w-6 h-6 text-secondary p-0 m-0"></UserIcon> 

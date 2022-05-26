@@ -57,10 +57,10 @@ const MyProfile = ({user}) => {
           </p>
             </div>
           <div className="modal-action flex justify-between">
-            <div className='flex gap-4'>
-                <Link to="#"><img className='w-8 h-8' src={facebook} alt="" /></Link>
-                <Link to="#"><img className='w-8 h-8' src={github} alt="" /></Link>
-                <Link to="#"><img className='w-8 h-8' src={linkedin} alt="" /></Link>
+            <div className='flex gap-4 items-center'>
+                <Link to="#"><img className='w-6 h-6' src={facebook} alt="" /></Link>
+                <Link to="#"><img className='w-6 h-6' src={github} alt="" /></Link>
+                <Link to="#"><img className='w-6 h-6' src={linkedin} alt="" /></Link>
             </div>
             <label htmlFor="mymodal" className="btn bg-secondary text-white font-bold border-0">
              X
