@@ -20,6 +20,7 @@ import ManageProduct from './Pages/Dashboard/ManageProduct';
 import Blog from './Pages/Blog/Blog';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import Portfolio from './Pages/Portfolio/Portfolio';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 
 
 
@@ -44,7 +45,7 @@ function App() {
         </RequireAuth>}>
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
-          <Route path='users' element={<Users></Users>}></Route>
+          <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
         </Route>

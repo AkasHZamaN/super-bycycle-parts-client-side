@@ -6,7 +6,9 @@ import UserRow from "./UserRow";
 const Users = () => {
   const {data: users, isLoading, refetch} = useQuery("users", ()=>fetch('http://localhost:5000/user', {
       method: 'GET',
-      authorization: `Bearer ${localStorage.getItem('accessToken')}`
+      headers:{
+        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+      }
   }).then((res) => res.json())
   );
 

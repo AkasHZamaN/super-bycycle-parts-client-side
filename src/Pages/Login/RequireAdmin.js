@@ -6,7 +6,7 @@ import auth from '../../firebase.init';
 import useAdmin from '../../hooks/useAdmin';
 import Loading from '../Loading/Loading';
 
-const RequreAdmin = ({children}) => {
+const RequireAdmin = ({children}) => {
     const [user, loading] = useAuthState(auth);
     const [admin, adminLoading]= useAdmin(user)
     const location = useLocation();
@@ -23,4 +23,4 @@ const RequreAdmin = ({children}) => {
     return children;
 };
 
-export default RequreAdmin;
+export default RequireAdmin;
