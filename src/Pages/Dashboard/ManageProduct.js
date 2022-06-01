@@ -12,7 +12,7 @@ const ManageProduct = () => {
   const deleteItem = id =>{
     const proceed = toast.success('Are You Sure? Your Product has been deleted !')
     if(proceed){
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://mighty-river-69117.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'DELETE',
         })
