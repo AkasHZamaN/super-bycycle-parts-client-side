@@ -3,6 +3,7 @@ import about1 from "../../Images/about-1.jpg";
 import about2 from "../../Images/about-2.jpg";
 import about3 from "../../Images/about-3.jpg";
 import cycle from "../../Images/cycle.png";
+import ContactForm from "../ContactForm/ContactForm";
 
 const BussinessCard = () => {
   return (
@@ -115,14 +116,15 @@ const BussinessCard = () => {
                     Request Quote
                   </button>
                 </p>
-                <button className="btn bg-gradient-to-r from-primary to-secondary border-0 text-white">
+                <label htmlFor="contactModal" className="btn bg-gradient-to-r from-primary to-secondary border-0 text-white">
                   Contact Us
-                </button>
+                </label>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ContactForm></ContactForm>
     </div>
   );
 };

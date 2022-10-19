@@ -12,7 +12,7 @@ const ReviewCarousal = () => {
             <img className="w-12 h-10 mr-2 " src={cycle} alt="" />
             <h1 className="font-bold text-2xl text-secondary uppercase my-6">Customer Review Zone</h1>
         </div>
-      <div className="card lg:card-side  bg-base-100 shadow-xl mb-6 p-6">
+      <div className="card lg:card-side  bg-base-100  mb-6 p-6">
         <div>
           <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
@@ -63,7 +63,7 @@ const ReviewCarousal = () => {
         </div>
 
         <div className="carousel-item lg:w-3/5">
-          <img src={newCycle} className="w-full mx-auto shadow-xl" alt="" />
+          <img style={{height:"385px"}} src={newCycle} className="w-full mx-auto rounded-3xl " alt="" />
         </div>
       </div>
     </div>

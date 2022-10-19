@@ -14,7 +14,7 @@ const NewsLatter = () => {
                 </div>
                 <div className='flex gap-2'>
                 <input type="email" placeholder="Type Email" className="input input-bordered input-success w-full max-w-xs" />
-                <button className="btn bg-gradient-to-r from-primary to-secondary border-0 text-white">Success</button>
+                <button className="btn bg-gradient-to-r from-primary to-secondary border-0 text-white">Send</button>
                 </div>
             </div>
         </div>

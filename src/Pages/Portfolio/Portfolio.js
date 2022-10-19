@@ -3,15 +3,15 @@ import React from "react";
 
 const Portfolio = () => {
   return (
-    <div class="hero min-h-screen bg-base-200">
-      <div class="hero-content flex-col lg:flex-row">
+    <div className="hero min-h-screen bg-base-200">
+      <div className="hero-content flex-col lg:flex-row">
         <img
           src="https://i.postimg.cc/mgYwrmKm/akash.jpg"
-          class="max-w-sm rounded-lg shadow-2xl"
+          className="max-w-sm rounded-lg shadow-2xl"
          alt=""/>
         <div>
-          <h1 class="text-2xl font-bold">Md. Kawser Uzzaman</h1>
-          <p class="py-6">
+          <h1 className="text-2xl font-bold">Md. Kawser Uzzaman</h1>
+          <div className="py-6">
             <p className="flex mb-2"><MailIcon className="w-6 h-6 mr-2"></MailIcon> <span>kawseruzzaman05@gamil.com</span></p>
             <div>
             <p className="flex items-start"><AcademicCapIcon className="w-6 h-6 mr-2"></AcademicCapIcon><span> Leading University, Sylhet</span></p>
@@ -42,8 +42,8 @@ const Portfolio = () => {
                <a href="https://alex-gym-stone.web.app/">Alex GYM Stone</a><br />
                </p>
             </div>
-          </p>
-          <button class="btn btn-accent">Hire Me!</button>
+          </div>
+          <button className="btn btn-accent">Hire Me!</button>
         </div>
       </div>
     </div>

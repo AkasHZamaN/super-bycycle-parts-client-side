@@ -6,7 +6,7 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit =  (data, event) => {
         console.log(data)
-        const url = `https://mighty-river-69117.herokuapp.com/product`;
+        const url = `http://localhost:5000/product`;
         fetch(url, {
             method:'POST',
             headers:{

@@ -4,7 +4,7 @@ const useSingleProduct = (id) => {
     const [items, setItems] = useState({});
 
   useEffect(() => {
-    const url = `https://mighty-river-69117.herokuapp.com/product/${id}`;
+    const url = `http://localhost:5000/product/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
