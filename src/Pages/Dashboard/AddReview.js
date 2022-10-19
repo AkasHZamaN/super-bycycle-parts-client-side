@@ -17,6 +17,7 @@ const AddReview = () => {
 
   const addReview = (data, event) => {
     console.log(data);
+    event.target.reset();
     const url = `https://mighty-river-69117.herokuapp.com/review`;
     fetch(url,{
         method: 'POST',
@@ -29,6 +30,7 @@ const AddReview = () => {
     .then(result => {
         console.log(result);
     })
+    
   }
   return (
     <div>
