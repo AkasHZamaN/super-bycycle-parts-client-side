@@ -26,7 +26,7 @@ const PurchaseProduct = () => {
           address: user?.address ? user?.address : 'Sylhet-3100, Bangladesh',
           phoneNumber: user?.phoneNumber ? user?.phoneNumber : '+8801725XXXXXX'
         }
-        axios.post(`http://localhost:5000/order`, order)
+        axios.post(`https://mighty-river-69117.herokuapp.com/order`, order)
         .then(response => {
           const {data}= response;
           if(data.insertedId){

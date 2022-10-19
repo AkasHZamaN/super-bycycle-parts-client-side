@@ -11,7 +11,7 @@ const MyOrder = () => {
   useEffect(() => {
     const getOrders = async () => {
       const email = user?.email;
-      const url = `http://localhost:5000/order?email=${email}`;
+      const url = `https://mighty-river-69117.herokuapp.com/order?email=${email}`;
       const { data } = await axios.get(url, {
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -26,7 +26,7 @@ const MyOrder = () => {
   const deleteItem = id =>{
     const proceed = toast.success('Product Successfully Deleted');
     if(proceed){
-        const url =`http://localhost:5000/order/${id}`;
+        const url =`https://mighty-river-69117.herokuapp.com/order/${id}`;
     fetch(url, {
         method: 'DELETE',
     })

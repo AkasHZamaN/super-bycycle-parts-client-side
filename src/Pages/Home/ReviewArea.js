@@ -11,7 +11,7 @@ const ReviewArea = () => {
     const [reviews, setReview] = useState([]);
 
     useEffect(()=>{
-        const url = `http://localhost:5000/review`;
+        const url = `https://mighty-river-69117.herokuapp.com/review`;
         fetch(url)
         .then(res => res.json())
         .then(data => setReview(data))
